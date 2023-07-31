@@ -1,0 +1,34 @@
+{% include "index.html" %}
+{% block content %}
+<div class="tabla-datos mt-5 container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID Registro</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Serial Carroceria</th>
+                <th scope="col">Serial Motor</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Condicion de Precio</th>
+            </tr>
+        </thead>         
+            {% for item in lista %}
+            <tr>
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.marca}}</td>
+                <td>{{item.modelo}}</td>
+                <td>{{item.serial_carroceria}}</td>
+                <td>{{item.serial_motor}}</td>
+                <td>{{item.categoria}}</td>
+                <td>{{item.precio}}</td>
+                <td>{{item.condicion}}</td>
+            </tr>
+            
+            {% endfor %}
+            
+        </tbody>
+    </table>
+</div>  
+{% endblock %}
